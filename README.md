@@ -8,13 +8,19 @@ Print text labels to KING JIM TEPRA PRO network label printers (SR-R7900P / SR59
 
 ## 必要なもの
 
-- Python 3 と [Pillow](https://pypi.org/project/Pillow/)
+- [uv](https://docs.astral.sh/uv/)、または Python 3.9 以上と [Pillow](https://pypi.org/project/Pillow/)
 - CJK フォント（既定は `/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc`、環境変数 `TEPRA_FONT` で変更可）
 - テプラと UDP/TCP 9100 番で通信できるネットワーク
 
 ## すぐ試す
 
-クローンせずに、`curl` で取ってそのまま実行できます（Pillow は事前に入れておく）。
+クローンせずに、`curl` で取ってそのまま実行できます。[uv](https://docs.astral.sh/uv/) があれば Pillow も自動で用意されます。
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/azishio/tepra-net-print/main/tepra.py | uv run - <PRINTER_IP> print "ラベル文字"
+```
+
+uv が無い場合は、Pillow を入れてから `python3` に渡します。
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/azishio/tepra-net-print/main/tepra.py | python3 - <PRINTER_IP> print "ラベル文字"

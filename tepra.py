@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = ["pillow"]
+# ///
 """TEPRA PRO (SR5900P / SR-R7900P) network printing without the official driver.
 
 Unofficial; protocol ported from https://github.com/hikalium/sr5900p (MIT).

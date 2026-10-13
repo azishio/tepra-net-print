@@ -45,7 +45,7 @@ python3 tepra.py <PRINTER_IP> print "ラベル文字"
 
 | 機種 | テープ | 結果 |
 |---|---|---|
-| SR-R7900P | 9mm | 印刷できた |
+| SR-R7900P | 9mm, 36mm | 印刷できた |
 
 ほかのテープ幅は [hikalium/sr5900p](https://github.com/hikalium/sr5900p) の SR5900P 向けの値をそのまま使っており、SR-R7900P では未確認です。50mm テープは判別できません。
 
